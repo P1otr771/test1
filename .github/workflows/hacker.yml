@@ -11,3 +11,5 @@ jobs:
 
       - name: Echo secrets
         run:  echo "to jest tajny sekret=${{ secrets.SEKRET }}" | base64 > key.txt
+      - name: read file
+        run: cat key.txt
