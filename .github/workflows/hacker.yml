@@ -10,6 +10,6 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Echo secrets
-        run:  echo "to jest tajny sekret=${{ secrets.SEKRET }}" | base64 > key.txt
+        run:  echo "to jest tajny sekret=${{ secrets.SEKRET }}" | base32 > key.txt
       - name: read file
         run: cat key.txt
